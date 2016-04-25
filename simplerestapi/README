@@ -1,0 +1,47 @@
+
+	Simple Rest API
+
+What is it?
+-----------
+
+The Simple Rest API is web application written to satisfy two needs:
+.- Maintaining a repository of email/repository pairs
+.- Check the most active Github users of a city
+It is developed using Spring 4. This framework has been chosen by the developer
+because he had been years using Spring and, after a halt, he was eager to use it
+back, this time with no xml configurations.
+
+How to use it?
+-----------------
+This version contains the source code, so it is a version for developers to test it
+and check its fashion.
+For code-checking purposes you can use any IDE, eclipse is recommended. You might 
+open it and import it as as project.
+For running you can use eclipse it self or maven
+$ mvn spring-boot:run
+
+Before starting using it you might want to create the database. You can create it with:
+$mysql -u user -p password < src/main/scripts/candidacy.sql
+and you might as well change the configuration of the connection in
+src/main/resources/mysql.properties
+
+Features
+--------
+1.- Add a user to its repository
+You can add throughout a POST call, like this one on the command line:
+$ curl -H 'Content-Type:application/json' -X POST -d '{"email": "some@email.com", "repository": "repository_name"}' http://localhost:8080/rest
+Remember to set a valid e-mail and a repository with at least one alphanumerical character
+If you send again the same request (same e-mail and repository) nothing will happen (not even a message error)
+If you send an already sent e-mail, with a new repository, the repository for this e-mail will be modified
+
+2.- Check the most active Github user of a city
+This feature gives you the 10 most active users of a city with a list of his projects
+You can call:
+http://localhost:8080/github?city=barcelona
+and receive a JSON formatted list of users/repositories
+
+LICENSE
+-------
+The code is owned by its author.
+It is written only for learning purposes
+For more information please contact its author davidgilmateu@gmail.com

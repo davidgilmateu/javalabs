@@ -1,0 +1,8 @@
+00:36:20.665 [main] INFO  candidacy.simplerestapi.Application - Starting Application on tresmall3 with PID 9123 (/home/david/workspaces/labs/simplerestapi/target/classes started by david in /home/david/workspaces/labs/simplerestapi) 
+00:36:20.668 [main] DEBUG candidacy.simplerestapi.Application - Running with Spring Boot v1.2.5.RELEASE, Spring v4.1.7.RELEASE 
+00:36:30.213 [main] INFO  candidacy.simplerestapi.Application - Started Application in 10.315 seconds (JVM running for 11.004) 
+00:45:26.296 [main] INFO  candidacy.simplerestapi.Application - Starting Application on tresmall3 with PID 9942 (/home/david/workspaces/labs/simplerestapi/target/classes started by david in /home/david/workspaces/labs/simplerestapi) 
+00:45:26.300 [main] DEBUG candidacy.simplerestapi.Application - Running with Spring Boot v1.2.5.RELEASE, Spring v4.1.7.RELEASE 
+00:46:23.181 [main] INFO  candidacy.simplerestapi.Application - Starting Application on tresmall3 with PID 10109 (/home/david/workspaces/labs/simplerestapi/target/classes started by david in /home/david/workspaces/labs/simplerestapi) 
+00:46:23.183 [main] DEBUG candidacy.simplerestapi.Application - Running with Spring Boot v1.2.5.RELEASE, Spring v4.1.7.RELEASE 
+00:46:27.262 [main] INFO  candidacy.simplerestapi.Application - Started Application in 4.389 seconds (JVM running for 5.496) 

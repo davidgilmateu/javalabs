@@ -1,0 +1,5 @@
+candidacy/simplerestapi/test/GithubControllerTest.class
+candidacy/simplerestapi/model/TestJavaBeans.class
+candidacy/simplerestapi/test/PairRestControllerTest.class
+candidacy/simplerestapi/data/JsonGithubRepositoryTest.class
+candidacy/simplerestapi/data/PairRepositoryTest.class
