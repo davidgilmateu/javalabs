@@ -128,14 +128,12 @@ public class BulkLoader {
 		        	KeyValue keyValue;
 					try {
 						keyValue = queue.take();
-						if(ended) break;
-						writeToHbase(keyValue, cf, cv);
 					} catch (InterruptedException e) {
-						if(ended) break;
 						log.error("Interrupted while waiting for {}", htable.getName());
-						log.error("{}", e);
+						log.debug("{}", e);
 						return;
 					}
+					writeToHbase(keyValue, cf, cv);
 		        }
 		    }
 		});
@@ -148,6 +146,8 @@ public class BulkLoader {
 	 * @param columnValue where the data goes
 	 */
 	private void writeToHbase(KeyValue keyValue, byte[] columnFamily, byte[] columnValue){
+		if (ended) // keyValue is actually the pill
+			return;
     	Put p = new Put(keyValue.key);
     	byte[] value = Bytes.toBytes(keyValue.value);
 		p.add(columnFamily, columnValue, value);
